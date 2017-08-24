@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="simple.css" rel="stylesheet">
+  <title>jQuery animation examples</title>
+</head>
+<body>
+<div class="container">
+  <div class="box">
+    <div class="box-header">
+      <h1 class="box-title">title</h1>
+      <div class="btn content expanded" title="click to hide">&#x2c5;</div>
+    </div>
+    <div class="box-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo dolorem aperiam velit itaque minima consequatur voluptatum aspernatur quae quam animi reprehenderit laboriosam eum, labore commodi, placeat minus enim non. Deserunt numquam eligendi dolor reiciendis, officia. Nihil sint eveniet, delectus ut, vel saepe laudantium minima eos ratione, perspiciatis molestiae doloremque!</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-header">
+      <h1 class="box-title">title</h1>
+      <div class="btn content expanded" title="click to hide">&#x2c5;</div>
+    </div>
+    <div class="box-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo dolorem aperiam velit itaque minima consequatur voluptatum aspernatur quae quam animi reprehenderit laboriosam eum, labore commodi, placeat minus enim non. Deserunt numquam eligendi dolor reiciendis, officia. Nihil sint eveniet, delectus ut, vel saepe laudantium minima eos ratione, perspiciatis molestiae doloremque!</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-header">
+      <h1 class="box-title">title</h1>
+      <div class="btn content expanded" title="click to hide">&#x2c5;</div>
+    </div>
+    <div class="box-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis explicabo dolorem aperiam velit itaque minima consequatur voluptatum aspernatur quae quam animi reprehenderit laboriosam eum, labore commodi, placeat minus enim non. Deserunt numquam eligendi dolor reiciendis, officia. Nihil sint eveniet, delectus ut, vel saepe laudantium minima eos ratione, perspiciatis molestiae doloremque!</p>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  $(document).ready(function(){
+    console.log("document ready");
+    $('.btn.content.expanded').click(function(){
+      //console.log("button clicked");
+      $(this).text("˄");
+      $(this).attr('title','click to show');
+      $(this).toggleClass('expanded');
+      $(this).parent().siblings('.box-body').slideToggle(500);
+    });
+  });
+</script>
+</html>
